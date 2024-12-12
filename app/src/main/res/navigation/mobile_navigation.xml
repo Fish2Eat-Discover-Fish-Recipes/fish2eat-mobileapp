@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <!-- Fragment Home -->
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.dicoding.fish2eat.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_fishDetail"
+            app:destination="@id/fishDetailFragment" >
+        <argument
+            android:name="fishName"
+            app:argType="string" />
+        <argument
+            android:name="scientificName"
+            app:argType="string" />
+        <argument
+            android:name="habitat"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+        <argument
+            android:name="imageURL"
+            app:argType="string" />
+        <argument
+            android:name="imageUri"
+            app:argType="string" />
+    </action>
+    </fragment>
+
+    <!-- Fragment Favorite -->
+    <fragment
+        android:id="@+id/navigation_favorite"
+        android:name="com.dicoding.fish2eat.ui.favorite.FavoriteFragment"
+        android:label="@string/title_favorite"
+        tools:layout="@layout/fragment_favorite" />
+
+    <!-- Fragment FishDetail -->
+    <fragment
+        android:id="@+id/fishDetailFragment"
+        android:name="com.dicoding.fish2eat.ui.fishdetail.FishDetailFragment"
+        tools:layout="@layout/activity_detail_fish">
+        <argument
+            android:name="fishName"
+            app:argType="string" />
+        <argument
+            android:name="scientificName"
+            app:argType="string" />
+        <argument
+            android:name="habitat"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+        <argument
+            android:name="imageURL"
+            app:argType="string" />
+        <argument
+            android:name="imageUri"
+            app:argType="string" />
+
+
+        <action
+            android:id="@+id/action_fishDetail_to_recipeList"
+            app:destination="@id/recipeListFragment">
+
+        </action>
+    </fragment>
+
+    <!-- Fragment Recipe -->
+    <fragment
+        android:id="@+id/recipeListFragment"
+        android:name="com.dicoding.fish2eat.ui.Recipe.RecipeListFragment"
+        android:label="RecipeListFragment"
+        tools:layout="@layout/activity_recipe_list">
+        <action
+            android:id="@+id/action_recipeListFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
+        <argument
+            android:name="fishName"
+            app:argType="string" />
+        <argument
+            android:name="fishId"
+            app:argType="string" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/recipeDetailFragment"
+        android:name="com.dicoding.fish2eat.ui.Recipe.RecipeDetailFragment"
+        android:label="Recipe Detail"
+        tools:layout="@layout/activity_detail_recipe">
+        <argument
+            android:name="recipe"
+            app:argType="com.dicoding.fish2eat.application.data.model.Recipe" />
+    </fragment>
+
+
+</navigation>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Fish2Eat</string>
+    <string name="title_home">Home</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="image_classifier_failed">Gagal dalam menginisialisasi image classifier.</string>
+    <string name="no_recipes_found">No recipes found for this fish.</string>
+    <string name="error_loading_recipes">Error occurred while loading recipes. Please try again later.</string>
+    <string name="loading_recipes">Loading recipes...</string>
+
+    <!-- Labels -->
+    <string name="recipe_list_title">Recipes</string>
+    <string name="recipe_title">Title</string>
+    <string name="recipe_description">Description</string>
+    <string name="failed_to_load_recipes">Gagal memuat resep</string>
+    <string name="invalid_fish_id">ID ikan tidak valid</string>
+</resources>
