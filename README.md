@@ -27,7 +27,7 @@
 <p align="center">
   <img src="./image/screen.jpg" alt="Screen" width="250">
   <img src="./image/home.jpg" alt="Home" width="250">
-  <img src="./image/fish.jpg" alt="Fish" width="2500">
+  <img src="./image/fish.jpg" alt="Fish" width="250">
   <img src="./image/daftar-resep.jpg" alt="Recipe List" width="250">
   <img src="./image/recipes.jpg" alt="Recipes" width="250">
 </p>
