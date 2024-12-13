@@ -1,0 +1,91 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5FAF7">
+
+    <!-- App Logo -->
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:contentDescription="Logo aplikasi"
+        android:src="@drawable/ic_fish_logo" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Masak Ikan Apa Hari Ini?"
+        android:textColor="#4CAF50"
+        android:textSize="20sp" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/subtitle_text"
+        android:layout_width="264dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Temukan Resep Masakan berdasarkan Jenis Ikan!"
+        android:textAlignment="center"
+        android:textColor="#7DAF9C"
+        android:textSize="16sp" />
+
+    <!-- Fish Image -->
+    <ImageView
+        android:id="@+id/fish_image"
+        android:layout_width="wrap_content"
+        android:layout_height="311dp"
+        android:layout_below="@id/subtitle_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:contentDescription="Ilustrasi ikan"
+        android:src="@drawable/ic_fish_illustration" />
+
+    <!-- Buttons Container -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/fish_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp">
+
+        <!-- Upload Image Button -->
+        <Button
+            android:id="@+id/uploadButton"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#4CAF50"
+            android:drawableLeft="@drawable/ic_upload"
+            android:drawablePadding="8dp"
+            android:text="Unggah Gambar"
+            android:textColor="#FFFFFF" />
+
+        <!-- Capture Image Button -->
+        <Button
+            android:id="@+id/captureButton"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="#7DAF9C"
+            android:drawableLeft="@drawable/ic_camera"
+            android:drawablePadding="8dp"
+            android:text="Tangkap Gambar"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</RelativeLayout>
